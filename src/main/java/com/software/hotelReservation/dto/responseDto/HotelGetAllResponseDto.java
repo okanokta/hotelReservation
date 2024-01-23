@@ -1,4 +1,4 @@
-package com.software.hotelReservation.dto.response;
+package com.software.hotelReservation.dto.responseDto;
 
 import lombok.Data;
 
