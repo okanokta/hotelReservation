@@ -11,23 +11,27 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-@Entity
-@Table(name="hotel")
 @Data
-public class Hotel {
+@Entity
+@Table(name="customer")
+public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name="hotel_name")
-	private String hotelName;
+	@Column(name="name")
+	private String name;
 	
-	@Column(name="address")
-	private String address;
+	@Column(name="last_name")
+	private String lastName;
 	
-	@OneToMany(mappedBy = "hotel")
-	private List<Room> rooms;
+	@Column(name="email")
+	private String email;
 	
-	@OneToMany(mappedBy = "hotel")
+	@Column(name="phone")
+	private String phone;
+	
+	@OneToMany(mappedBy = "customer")
 	private List<Reservation> reservations;
+	
 }
