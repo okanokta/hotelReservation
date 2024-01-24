@@ -2,12 +2,14 @@ package com.software.hotelReservation.model;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -33,5 +35,9 @@ public class Customer {
 	
 	@OneToMany(mappedBy = "customer")
 	private List<Reservation> reservations;
+	
+	@OneToOne(mappedBy = "customer",cascade = CascadeType.ALL)
+	private Payment payment;
+	
 	
 }
