@@ -1,12 +1,16 @@
 package com.software.hotelReservation.dto.requestDto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class RoomSaveRequestDto {
-	private String roomNumber;
+	
+	private int roomNumber;
 	private String roomType;
-	private double price;
+	private int price;
 	private Long hotelId;
+	private Long reservationId;
 
 }

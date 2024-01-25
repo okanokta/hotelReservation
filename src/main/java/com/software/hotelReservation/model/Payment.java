@@ -1,6 +1,5 @@
 package com.software.hotelReservation.model;
 
-import java.time.LocalDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,26 +12,25 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="hotel")
-
+@Table(name = "payment")
 public class Payment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@Column(name="payment_date")
-	private LocalDate paymentDate;
-	
-	@Column(name="amount")
-	private double amount;
-	
-	@OneToOne()
-	@JoinColumn(name="customer_id")
+	@Column(name = "payment_id")
+	private Long paymentId;
+
+	@Column(name = "payment_date")
+	private String paymentDate;
+
+	@Column(name = "amount")
+	private int amount;
+
+	@OneToOne
+	@JoinColumn(name = "customer_id")
 	private Customer customer;
-	
-	@OneToOne()
-	@JoinColumn(name="hotel_id")
-	private Hotel hotel;
-	
+
+	@OneToOne
+	@JoinColumn(name = "reservation_id")
+	private Reservation reservation;
 
 }

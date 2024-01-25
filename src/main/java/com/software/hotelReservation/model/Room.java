@@ -26,10 +26,13 @@ public class Room {
 	private String roomType;
 	
 	@Column(name="price")
-	private double price;
+	private int price;
 	
 	@ManyToOne()
 	@JoinColumn(name="hotel_id")
 	private Hotel hotel;
-
+	
+	@ManyToOne()
+	@JoinColumn(name="reservation_id")
+	private Reservation reservation;
 }

@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class HotelGetAllResponseDto {
-	private Long id;
+	private Long hotelId;
 	private String hotelName;
 	private String address;
 }

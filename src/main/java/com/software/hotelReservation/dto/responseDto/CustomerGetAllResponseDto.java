@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class CustomerGetAllResponseDto {
-	private Long id;
+	private Long customerId;
 	
 	private String name;
 

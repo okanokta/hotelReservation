@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import com.software.hotelReservation.dto.requestDto.HotelSaveRequestDto;
+import com.software.hotelReservation.dto.requestDto.HotelUpdateRequestDto;
 import com.software.hotelReservation.dto.responseDto.HotelGetAllResponseDto;
 import com.software.hotelReservation.model.Hotel;
 import com.software.hotelReservation.repository.HotelRepository;
@@ -30,6 +31,22 @@ public class HotelService {
 		hotelRepository.save(hotel);
         return true;
 		
+	}
+
+	public Boolean updateHotelName(HotelUpdateRequestDto hotelUpdateRequestDto) {
+	    Hotel existingHotel = hotelRepository.findById(hotelUpdateRequestDto.getId())
+	            .orElseThrow(() -> new RuntimeException("Hotel not found with id: " + hotelUpdateRequestDto.getId()));
+
+	    // Assuming hotelName is the only field you want to update
+	    existingHotel.setHotelName(hotelUpdateRequestDto.getHotelName());
+
+	    hotelRepository.save(existingHotel);
+	    return true;
+	}
+
+	public Boolean deleteHotel(Long id) {
+		this.hotelRepository.deleteById(id);
+		return true;
 	}
 	
 }
