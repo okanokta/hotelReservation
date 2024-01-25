@@ -15,7 +15,8 @@ Asagıdaki gibi eklentileri eklememiz ve Generate etmemiz gerekiyor.
 #### GET: localhost:8081/reservation/getAllReservation
 ![reservation_GET](https://github.com/okanokta/hotelReservation/assets/100216485/c7445573-d736-4d45-b07b-9832e5216820)
 #### PUT: localhost:8081/reservation/updateReservation
-![reservation_put](https://github.com/okanokta/hotelReservation/assets/100216485/3818f1c4-d0b2-447e-ba94-9a3081bc742e)
+![newReservation_put](https://github.com/okanokta/hotelReservation/assets/100216485/883177c5-f396-47d9-81f7-0bc514d35088)
+
 #### DELETE: localhost:8081/reservation/{id}
 ![reservation_delete](https://github.com/okanokta/hotelReservation/assets/100216485/94f7f7fe-7fe6-4ab2-9b30-69ce10694d9f)
 #### GET: localhost:8081/reservation/getAllReservation
