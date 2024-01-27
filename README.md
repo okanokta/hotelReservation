@@ -8,7 +8,8 @@ Asagıdaki gibi eklentileri eklememiz ve Generate etmemiz gerekiyor.
 ### 4.Lombok
 ### 3.Postman 
 ## Veritabanı UML Diyagramı
-![Başlıksız Diyagram drawio](https://github.com/okanokta/hotelReservation/assets/100216485/beab45a7-22fe-40ee-aea0-a8eb4a77d113)
+![updateDiagram](https://github.com/okanokta/hotelReservation/assets/100216485/1712d391-901d-41f0-b904-eca2d4849be9)
+
 ## API TEST ETME 
 #### POST: localhost:8081/reservation/saveReservation
 ![reservation_post](https://github.com/okanokta/hotelReservation/assets/100216485/c3b4b750-7b73-44c0-a415-861f79d57d17)
